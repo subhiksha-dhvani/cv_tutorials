@@ -1,1 +1,55 @@
+avgtime = framesPerSec(30,framecount)
+insttime = framesPerSec(30,1)
+ 
+ 
+def framesPerSec(fpsknwn, fpsToFind):
+    calfps = fpsToFind/fpsknwn
+    return calfps
+ 
+ 
+Understand and explain the above?
+framesPerSec(fpsknwn, fpsToFind) 
+Average speed:
+I have considered 30 frames in one second, and wanted to calculate for total frames so passed frame count
+avgtime = framesPerSec(30,framecount)
+
+for example:
+To find seconds for 6 frames
+30 frames, one second
+6 total frames x seconds
+
+calfps= 6/30  
+
+Instantaneous speed:
+I have considered 30 frames in one second, and wanted to calculate for one frame at a time
+
+calfps= 1/30
+
+here callfps is seconds; to use in distance divided by time(seconds)
+
+==========================================================
+What will happen if there are two balls?
+Only one ball is calculated.
+x, y, w, h and current and previous is done for one ball when another ball when another ball is give value is changed to new value, (old value is lost)
+===========================================================
+# Countour area for each contour
+            for j, ci in enumerate(iterable=cntr):
+What is the use of this loop
+cntr has all outlines 
+looping each outline seperately to find ball circle with required threshold area
+ci here will have points of the outline circle 
+
+
+===========================================================
+Display output result with units
+Both average speed and instantaneous speed will have the unit pixel per second 
+
+because the diffrence between x (current and previous is taken )
+
+===========================================================
+Why are you using frame.copy()? - Explain
+when there is no countour I want to display my original frame. (used when ball is not available = no contour found )
+
+=============================================================
+
 
